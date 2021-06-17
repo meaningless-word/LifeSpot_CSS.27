@@ -26,7 +26,7 @@ header {
 /*Стиль хедера для главной страницы имеет приоритет,
 так как используется селектор по идентификатору*/
 #header-index {
-    color: #277112;
+    color: darkblue;
 }
 
 footer {
@@ -34,8 +34,8 @@ footer {
     bottom: 0;
     font-size: medium;
     color: dimgrey;
-    line-height: 66%;
-    padding-left: 3%;
+    line-height: 50%; /* размер межстрочного интервала */
+    padding-left: 1%;
 }
 
 /*Измените фон всех элементов нашей страницы, кроме сайдбара, с белого на любой другой (на ваш выбор).*/
@@ -44,12 +44,13 @@ header, footer, body, .video-container {
 }
 
 aside {
-    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+    /*height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
     position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
     z-index: 1; /* Сайд-бар будет поверх остальных элементов */
     top: 0; /* Сайдбар будет в самой верхней части страницы */
     left: 0;
+    bottom: 0;
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
     overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
     padding-top: 2%;
@@ -60,8 +61,13 @@ body {
     padding-left: 11%;
 }
 
+.example {
+    padding: 5px;
+    border: 3px solid linen;
+}
+
 .example:hover {
-    background-color: darkgray;
+    border: 3px groove darkgray;
 }
 
 .navbar a {
@@ -70,15 +76,16 @@ body {
 
 .navbar a:hover {
     color: aquamarine;
+    text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 2em white;
 }
 
 input {
     border: 2px solid darkgray;
-    border-radius: 2px;
+    border-radius: 3px;
     outline: none;
-
+    margin: 1px 3px 2px;
 }
 
 input:focus {
-    border: 2px solid red;
+    border: 2px solid aquamarine;
 }
